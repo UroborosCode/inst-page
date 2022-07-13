@@ -1,0 +1,101 @@
+.footer{
+    margin-top: 100px;
+    &__bg{
+        background: #383838;
+        padding-top: 46px;
+        padding-bottom: 40px;
+    }
+    &__wrapp{
+        display: flex;
+        gap: 90px;
+        justify-content: space-between;
+    }
+    &__logo{
+        margin-bottom: 26px;
+        height: 32px;
+    }
+    &__fz1{
+        color: #fff;
+        @extend %lato-fw400;
+        display: block;
+        margin-bottom: 20px;
+    }
+    &__fz2{
+        color: #9C9C9C;
+        @extend %lato-fw400;
+        display: block;
+    }
+    &__fz3{
+        display: block;
+        color: #FFF;
+        @extend %lato-fw400;
+
+    }
+    &__head{
+        margin-top: 9px;
+    }
+    &__link{
+        margin-bottom: 10px;
+        transition: 0.5s;
+        &:hover{
+            color: #FF9900;
+            transition: 0.5s;
+        }
+    }
+    &__link-tell,
+    &__link-email{
+        transition: 0.5s;
+        &:hover{
+            color: #FF9900;
+            transition: 0.5s;
+        }
+    }
+    &__inner-box-cont{
+        display: flex;
+        margin-bottom: 20px;
+        margin-top: 7px;
+    }
+    &__link-q{
+        margin-bottom: 26px;
+    }
+    &__social{
+        margin-right: 10px;
+    }
+    &__btn{
+        padding: 18px 41px 18px 72px;
+        margin-bottom: 30px;
+        @extend %lato-fw600;
+        color: #FFF;
+        background: #1074EB;
+        border-radius: 3px;
+        border: none;
+        transition: 0.5s;
+        &:hover{
+            background: #FF9900;
+            transition: 0.5s;
+        }
+
+
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            background: url('../images/header-persona.svg');
+            top: 16px;
+            left: 42px;
+            width: 16px;
+            height: 20px;
+            display: block;
+        }
+    }
+    &__box-payment{
+        margin-top: 30px;
+        display: flex;
+        gap: 10px;
+    }
+    &__span-coopir{
+        display: inline-block;
+        margin-top: 50px;
+        color: #FFF;
+    }
+}

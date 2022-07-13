@@ -1,0 +1,184 @@
+.category-bar__list--active,
+.category-bar__overlay--active{
+    opacity: 0;
+    display: none;
+    z-index: -100 !important;
+    transition: 0.5s;
+}
+.category-bar{
+    &__nav-btn{
+        padding: 18px 20px 18px 55px;
+        color: #FFF;
+        border: none;
+        background: #1074EB;
+        border-radius: 3px;
+        @extend %lato-fw600;
+        position: relative;
+        transition: 0.5s;
+        &::after{
+            position: absolute;
+            content: '';
+            background: url('../images/catalog1.svg') center no-repeat;
+            top: 18px;
+            left: 18px;
+            width: 20px;
+            height: 18px;
+        }
+        &:hover{
+            background: #FF9900;
+            transition: 0.5s;
+        }
+    }
+    &__overlay{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 15;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    &__nav-btn{
+        position: relative;
+        width: 100%;
+        text-align: left !important;
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 1px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            width: 90%;
+        }
+    }
+    &__list{
+        position: absolute;
+        top: 0;
+        background: #1074EB;
+        border-radius: 3px 3px 0px 0px;
+        z-index: 20;
+        width: 256px;
+    }
+    &__list >  li:last-child > a{
+        &::after{
+            height: 0;
+        }
+    }
+    &__link{
+        display: inline-block;
+        @extend %lato-fw400;
+        color: #fff;
+        transition: 0.5s;
+        padding: 15px 64px 15px 15px;
+
+        &:hover{
+            color: #FF9900;
+            transition: 0.5s;
+        }
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 1px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            width: 241px;
+        }
+    }
+    &__list-item:hover{
+        background: rgba(255, 255, 255, 0.3);
+        
+    }
+    &__list-item:hover> &__wrapp-list{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    &__wrapp-list{
+        opacity: 0;
+        transition: 0.5s;
+        padding-top: 71px !important;
+        padding-left: 15px !important;
+        padding-bottom: 32px !important;
+        padding-right: 10px !important;
+        position: absolute;
+        left: 255px;
+        width: 493px;
+        background: #1074EB;
+        border-radius: 3px 3px 0px 0px;
+        height: 100%;
+        top: 0;
+        overflow: auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content;
+    }
+    &__wrapp-list-item{
+        margin-bottom: 22px;
+    }
+    &__wrapp-list-item:hover > ul{
+        display: block;
+    }
+    &__wrapp-link{
+        color: #fff;
+        @extend %lato-fw400;
+        padding-left: 31px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 21px;
+            width: 21px;
+            background-image: url('../images/+.png');
+            background-color: #383838;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 3px;
+        }
+        transition: 0.5s;
+        &:hover{
+            color: #FF9900;
+            transition: 0.5s;
+        }
+    }
+    &__wrapp-span{
+        color: rgba(165, 181, 226, 1);
+    }
+    &__inner-list{
+        display: none;
+    }
+    &__inner-link{
+        font-size: 14px;
+        line-height: 17px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: #fff;
+        padding-left: 56px;
+        margin-top: 15px;
+        display: block;
+        max-width: 186px;
+        width: 100%;
+        
+
+        transition: 0.5s;
+        &:hover{
+            color: #FF9900;
+            transition: 0.5s;
+        }
+    }
+}

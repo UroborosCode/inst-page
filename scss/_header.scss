@@ -1,0 +1,201 @@
+.header{
+    &__top-wrapp{
+        padding: 11px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__top-inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &__top-inner > a:last-child,
+    &__top-inner > button:last-child,
+    &__top-inner > button:first-child{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    &__top-link{
+        @extend %lato-fw400;
+        transition: 0.5s;
+        margin-right: 33px;
+        &:hover{
+            color: #FF9900;
+            transition: 0.5s;
+        }
+    }
+    &__top-span{
+        @extend %lato-fw400;
+        margin-right: 10px;
+        margin-left: 10px;
+        &--left{
+            color: #9C9C9C;
+        }
+    }
+    &__top-dots{
+        width: 4px;
+        height: 4px;
+        background: rgba(16, 116, 235, 1);
+        margin-left: 2px;
+        margin-right: 2px;
+        border-radius: 100%;
+    }
+    &__top-btn{
+        border: none;
+        background: inherit;
+        margin-right: 20px;
+        margin-left: 19px;
+    }
+    &__top-btn:hover > svg > path{
+        fill: #FF9900;
+    }
+    &__center-wrapp{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        margin-top: 20px;
+    }
+    &__link-tell{
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 30px;
+        font-family: 'Lato', sans-serif;
+        color: #383838;
+        transition: 0.5s;
+        margin-left: 30px;
+        &:hover{
+            transition: 0.5s;
+            color: #FF9900;
+        }
+    }
+    &__center-inner{
+        display: flex;
+        align-items: center;
+        &--social a:first-child{
+            margin-left: 0;
+        }
+        &--social a:last-child{
+            margin-right: 0;
+        }
+    }
+    &__form--search{
+        position: relative;
+    }
+    &__search{
+        border: 1px solid #C9C9C9;
+        border-radius: 3px;
+        color: #C9C9C9;
+        @extend %lato-fw400;
+        padding: 6px 107px 10px 10px;
+    }
+    &__submit{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        padding: 3px 10px 5px 10px;
+        display: block;
+        @extend %lato-fw400;
+        color: #FFF;
+        background: #1074EB;
+        border-radius: 3px;
+        transition: 0.5s;
+        border: none;
+        &:hover{
+            transition: 0.5s;
+            background: #FF9900;
+        }
+    }
+    &__center-link-social{
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+        &:hover{
+            box-shadow: 2px 4px 5px rgb(158, 158, 158);
+        }
+    }
+    &__center-link-icon{
+        background: inherit;
+        overflow: auto;
+    }
+    &__center-btn{
+        &--address{
+            background: #FF9900;
+            border-radius: 3px;
+            border: none;
+            color: #FFF;
+            padding: 8px 14px 10px 15px;
+            @extend %lato-fw600;
+            width: 100%;
+            transition: 0.5s;
+            max-width: 165px;
+            margin-right: 30px;
+            &:hover{
+                background: rgba(16, 116, 235, 1);
+                transition: 0.5s;
+            }
+        }
+        &--account{
+            border: none;
+            padding: 6px 10px 6px 10px;
+            background: #1074EB;
+            transition: 0.5s;
+            border-radius: 3px;
+            &:hover{
+                background: #FF9900;
+                transition: 0.5s;
+            }
+        }
+    }
+    &__nav-wrapp{
+        margin-top: 20px;
+    }
+    &__nav-list{
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        gap: 23px;
+    }
+    &__nav-btn{
+        padding: 18px 20px 18px 55px;
+        color: #FFF;
+        border: none;
+        background: #1074EB;
+        border-radius: 3px;
+        @extend %lato-fw600;
+        position: relative;
+        transition: 0.5s;
+        &::after{
+            position: absolute;
+            content: '';
+            background: url('../images/catalog1.svg') center no-repeat;
+            top: 18px;
+            left: 18px;
+            width: 20px;
+            height: 18px;
+        }
+        &:hover{
+            background: #FF9900;
+            transition: 0.5s;
+        }
+    }
+    &__nav-link{
+            transition: 0.5s;
+            @extend %lato-fw400;
+        &:hover{
+            color: #FF9900;
+            transition: 0.5s;
+        }
+    }
+// 
+    &__nav-list-item--btn{
+        position: relative;
+    }
+    &__media-box{
+        display: none;        
+    }
+    &__media-link{
+        @extend %lato-fw400;
+        color: #383838;
+    }
+}
